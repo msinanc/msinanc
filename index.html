@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<script>
+			// NWY5MWNlMTQtMWE3MC00MDJjLWFhZDEtZTFkZjhlY2I0ZmEz eyup
+			// YjFjYWFjNWUtOTg4My00MDYxLWI4MDgtNWNjOGNhN2U4ODYw sinan
+
+		function getCurrentUser() {
+			// const key = document.querySelector('#input').value;
+			const key = "YjFjYWFjNWUtOTg4My00MDYxLWI4MDgtNWNjOGNhN2U4ODYw";
+	if (!key) {
+		alert('API key is required')
+		return
+	}
+		fetch('https://api.clockify.me/api/v1/user', {
+		headers: {
+			'X-Api-Key': key
+		}
+	}).then(r => r.json()).then(user => {
+		let message = 'Provided API key is not valid'
+		user.name && (message = `Welcome ${user.name}\n`)
+		user.defaultWorkspace && (message2 = `Çalışma alanı id: ${user.defaultWorkspace}\n`)
+
+		document.querySelector('#result').innerText = message
+		document.querySelector('#result2').innerText = message2
+
+		
+	})
+		}
+		getClients();
+
+		function getClients() {
+			const key = "5e064c171cda2a266972eb8f";
+	if (!key) {
+		alert('API key is required')
+		return
+	}
+		fetch(`https://api.clockify.me/api/v1/workspaces/${user.defaultWorkspace}/clients`, {
+		headers: {
+			'X-Api-Key': key
+		}
+	}).then(r => r.json()).then(client => {
+		let message = 'Provided API key is not valid'
+		client.name && (message = `Welcome ${client.name}`)
+
+		document.querySelector('#result3').innerText = message
+
+	})
+		}
+		</script>
+	</head>
+		<body>
+			<p>Give me input</p>
+			<input id="input">
+			<div class="sorgu-cesitleri">
+		<button onClick="getCurrentUser()">Kullanıcı sorgula</button>
+		<button onClick="getClients()">Kullanıcı sorgula</button>
+	</div>
+
+	<div class="cevap-alani" id="cevap-alani">
+		<span id="result"></span>
+		<span id="result2"></span>
+		<span id="result3"></span>
+	</div>
+
+
+		</body>
+</html>
