@@ -1,7 +1,7 @@
 - 👋 Hi, I’m Sinan
 - 👀 I’m interested in any type of software, permaculture and working remotely as a free agent.
-- 🌱 I’m currently learning HTML, CSS, Angular, React to become a Front End Developer.
-- 💞️ I’m looking to collaborate on any kind of open source project that will be helpful for others. 
+- 🌱 I’m currently learning HTML, CSS, JavaScript, React to become a Front End Developer.
+- 💞️ I’m looking to collaborate on any kind of open source projects that will be helpful for me and others. 
 - 📫 How to reach me cingozsinan@outlook.com
 
 <!---
